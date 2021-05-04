@@ -9,7 +9,7 @@ import { Automovil } from '../models';
 })
 export class ListComponent implements OnInit {
   autos: Automovil[] = [];
-  autoSeleccionado!: Automovil;
+  autoSeleccionado: Automovil = {} as Automovil;
   constructor() { }
  
 
