@@ -1,18 +1,18 @@
 .vistas{
-    background-color: lawngreen;
-    font-size: 25px;
-    font-family:Arial, Helvetica, sans-serif;
-    color: rgba(255, 254, 254, 0.829);
-
     display: flex;
-    justify-content: space-around;
-    border:2px solid rgb(0, 0, 250);
-    
+    background-color: #aad8d3;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+    font-weight: bold;
 }
 
 .letra{
     font-size: 20px;
-    font-family: font;
     color: black;
 }
 
+.active{
+    background-color:  #00adb5;
+    color: rgb(0, 0, 0);
+}

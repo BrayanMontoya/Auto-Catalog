@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AUTOMOVILES } from '../data';
 import { Automovil } from '../models';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-list',
@@ -10,14 +11,33 @@ import { Automovil } from '../models';
 export class ListComponent implements OnInit {
   autos: Automovil[] = [];
   autoSeleccionado: Automovil = {} as Automovil;
-  constructor() { }
- 
+  
+  closeResult = '';
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
-    this.autos = AUTOMOVILES
+    this.autos = AUTOMOVILES;
   }
   onSelect(auto: Automovil){
     this.autoSeleccionado = auto;
+  }
+
+  open(content: any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 
 }
