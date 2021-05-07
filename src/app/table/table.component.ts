@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AUTOMOVILES } from '../data';
+import { Automovil } from '../models';
 
 @Component({
   selector: 'app-table',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-
+  autos: Automovil[] = [];
+  autoSeleccionado: Automovil = {} as Automovil;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.autos = AUTOMOVILES;
+  }
+
+  mandarDataHijo(auto: Automovil){
+    this.autoSeleccionado = auto; 
   }
 
 }

@@ -9,6 +9,7 @@ import { VistasComponent } from './vistas/vistas.component';
 import { ListComponent } from './list/list.component';
 import { TableComponent } from './table/table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HijoTablaComponent } from './table/hijo-tabla/hijo-tabla.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     VistasComponent,
     ListComponent,
     TableComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HijoTablaComponent
   ],
   imports: [
     BrowserModule,
