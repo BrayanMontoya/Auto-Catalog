@@ -10,6 +10,7 @@ import { ListComponent } from './list/list.component';
 import { TableComponent } from './table/table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HijoTablaComponent } from './table/hijo-tabla/hijo-tabla.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HijoTablaComponent } from './table/hijo-tabla/hijo-tabla.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
