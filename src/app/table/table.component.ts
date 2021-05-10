@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Automovil } from '../models';
 import { AutosService } from '../autos.service';
+import { ModalAddUpdateComponent } from '../modal-add-update/modal-add-update.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class TableComponent implements OnInit {
   pageSize = 10;
   autos: Automovil[] = [];
   autoSeleccionado: Automovil = {} as Automovil;
-  constructor(private autoService: AutosService) { }
+  constructor(private autoService: AutosService, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.autoService.getAutos().subscribe((response)=>{
@@ -24,6 +26,12 @@ export class TableComponent implements OnInit {
 
   mandarDataHijo(auto: Automovil){
     this.autoSeleccionado = auto; 
+  }
+
+  openModalEditar(auto: Automovil){
+    const modalRef = this.modalService.open(ModalAddUpdateComponent, {centered: true});
+    modalRef.componentInstance.auto = auto;
+    modalRef.componentInstance.accion = 'Editar';
   }
 
 }
