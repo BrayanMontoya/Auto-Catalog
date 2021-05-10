@@ -1,9 +1,21 @@
-<ng-container *ngFor='let auto of autos'>
+<ng-container *ngFor='let auto of autos | slice: (page-1) * pageSize : page * pageSize'>
     <div class="list">
         <div class="icon" (click)="open(content)" (click)="onSelect(auto)" ><i class="far fa-eye" ></i> </div>
         <div class="item"> {{auto.descripcion}} </div>
     </div>  
 </ng-container>
+<ngb-pagination
+  
+[(page)]="page" 
+
+[pageSize]="pageSize"
+[collectionSize]="autos.length" 
+class="d-flex justify-content-center" 
+[maxSize]="5"
+[rotate]="true"
+[ellipses]="false"
+[boundaryLinks]="true" >
+</ngb-pagination>
 
 <ng-template #content let-modal>
     <div class="modal-header">
