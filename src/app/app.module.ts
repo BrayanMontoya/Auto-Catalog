@@ -14,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.component';
 import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles-auto.component';
 import { FormsModule, NgForm } from '@angular/forms';
-import { ForbiddenValidatorDirective} from './directives/forbidden-name.directive';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { ForbiddenValidatorDirective} from './directives/forbidden-name.directiv
     PageNotFoundComponent,
     HijoTablaComponent,
     ModalAddUpdateComponent,
-    ModalDetallesAutoComponent,
-    ForbiddenValidatorDirective
+    ModalDetallesAutoComponent
   ],
   imports: [
     BrowserModule,

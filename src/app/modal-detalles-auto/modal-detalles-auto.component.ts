@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Automovil } from '../models';
 
 @Component({
   selector: 'app-modal-detalles-auto',
@@ -9,9 +7,7 @@ import { Automovil } from '../models';
 })
 export class ModalDetallesAutoComponent implements OnInit {
 
-  mensaje: string = "";
-  auto: Automovil = {} as Automovil;
-  constructor(public activeModal: NgbActiveModal) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
