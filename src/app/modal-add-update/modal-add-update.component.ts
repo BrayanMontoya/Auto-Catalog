@@ -17,4 +17,8 @@ export class ModalAddUpdateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    this.activeModal.close(this.auto);
+  }
+
 }
