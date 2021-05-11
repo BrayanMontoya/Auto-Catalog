@@ -13,6 +13,7 @@ import { HijoTablaComponent } from './table/hijo-tabla/hijo-tabla.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.component';
 import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles-auto.component';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
