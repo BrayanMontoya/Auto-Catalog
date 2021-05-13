@@ -28,7 +28,7 @@
           <ngb-progressbar type="dark" [value]="100" [striped]=true [animated]=true></ngb-progressbar>
         </th>
       </tr>
-      <tr *ngFor="let auto of autos  | slice: (page-1) * pageSize : page * pageSize | filter:searchText; index as i "  (click)="mandarDataHijo(auto)">
+      <tr *ngFor="let auto of autos |slice: (page-1) * pageSize : page * pageSize |filter:searchText; index as i"  (click)="mandarDataHijo(auto)">
         <th scope="row">{{auto._id }}</th>
         <td>{{auto.marca}}</td> 
         <td>{{ auto.submarca }}</td>
