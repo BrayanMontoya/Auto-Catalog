@@ -16,6 +16,7 @@ import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles
 import { FormsModule, NgForm } from '@angular/forms';
 import { ForbiddenValidatorDirective} from './directives/forbidden-name.directive';
 import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
     ModalAddUpdateComponent,
     ModalDetallesAutoComponent,
     ForbiddenValidatorDirective,
-    FormatoModelosPipe
+    FormatoModelosPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
