@@ -17,6 +17,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { ForbiddenValidatorDirective} from './directives/forbidden-name.directive';
 import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

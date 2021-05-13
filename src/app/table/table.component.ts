@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDetallesAutoComponent } from '../modal-detalles-auto/modal-detalles-auto.component';
 
 
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -17,6 +18,7 @@ export class TableComponent implements OnInit {
   autos: Automovil[] = [];
   autoSeleccionado: Automovil = {} as Automovil;
   displayProgressBar: boolean = true;
+  searchText: any;
   constructor(private autoService: AutosService, private modalService: NgbModal) { }
   auto: Automovil = {} as Automovil;
 
