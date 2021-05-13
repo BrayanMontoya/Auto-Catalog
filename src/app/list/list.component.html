@@ -1,3 +1,7 @@
+<p *ngIf="displayProgressBar">
+  <ngb-progressbar type="dark" [value]="100" [striped]=true [animated]=true></ngb-progressbar>
+</p>
+
 <ng-container *ngFor='let auto of autos | slice: (page-1) * pageSize : page * pageSize'>
     <div class="list">
         <div class="icon" (click)="open(content)" (click)="onSelect(auto)" ><i class="far fa-eye" ></i> </div>

@@ -1,4 +1,8 @@
 <button type="button" class="btn btn-dark" (click)="openModalAgregar(auto)">Agregar <i class="fa fa-plus"></i></button>
+
+<p *ngIf="displayProgressBar">
+  <ngb-progressbar type="dark" [value]="100" [striped]=true [animated]=true></ngb-progressbar>
+</p>
 <table class="table table-striped">
     <thead>
     <tr>

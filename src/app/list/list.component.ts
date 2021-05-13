@@ -13,12 +13,14 @@ export class ListComponent implements OnInit {
   pageSize = 10;
   autos: Automovil[] = [];
   autoSeleccionado: Automovil = {} as Automovil;
+  displayProgressBar: boolean = true;
   
   closeResult = '';
   constructor(private modalService: NgbModal, private autoService: AutosService) { }
 
   ngOnInit() {
     this.autoService.getAutos().subscribe((response)=>{
+      this.displayProgressBar = false;
       this.autos = response.data;
     });
 
