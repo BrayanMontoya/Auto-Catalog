@@ -15,6 +15,7 @@ import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.com
 import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles-auto.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ForbiddenValidatorDirective} from './directives/forbidden-name.directive';
+import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ForbiddenValidatorDirective} from './directives/forbidden-name.directiv
     HijoTablaComponent,
     ModalAddUpdateComponent,
     ModalDetallesAutoComponent,
-    ForbiddenValidatorDirective
+    ForbiddenValidatorDirective,
+    FormatoModelosPipe
   ],
   imports: [
     BrowserModule,
