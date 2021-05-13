@@ -18,6 +18,7 @@ import { ForbiddenValidatorDirective} from './directives/forbidden-name.directiv
 import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LogComponent } from './log/log.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ModalDetallesAutoComponent,
     ForbiddenValidatorDirective,
     FormatoModelosPipe,
-    HighlightDirective
+    HighlightDirective,
+    LogComponent
   ],
   imports: [
     BrowserModule,
